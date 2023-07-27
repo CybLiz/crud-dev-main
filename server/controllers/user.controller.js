@@ -10,13 +10,13 @@ const conn = mysql.createConnection({
 
 const createUser = (req, res) => {
 	// utilise req.body de body-parser
-	const { email, password } = req.body;
+	const { name, last_name, address, city, zip_code, email, phone_number } = req.body;
 	// Verifier si les champs sont remplis
-	if (!email || !password) {
-		return res.status(400).json({ error: 'Email ou mot de passe manquant', })
+	if (!name || !last_name || !address || !city || !zip_code || !email || !phone_number) {
+		return res.status(400).json({ error: 'élément manquant', })
 	}
-	const query = 'INSERT INTO user (email, password) Values (?,?)';
-	conn.query(query, [email, password], (err, result) => {
+	const query = 'INSERT INTO user (name, last_name, address, city, zip_code, email, phone_number) Values (?,?,?,?,?,?,?)';
+	conn.query(query, [name, last_name , address, city, zip_code, email, phone_number], (err, result) => {
 		if (err) {
 			console.error('Erreur lors de l\'insertion des données : ' + err);
 
@@ -28,8 +28,49 @@ const createUser = (req, res) => {
 
 	});
 };
+
+const editUser = (req, res) => {
+	
+	const { name, last_name, address, city, zip_code, email, phone_number } = req.body;
+
+    const query= 'UPDATE user SET name = ?, last_name = ?, address = ?, city = ?, zip_code = ?, email = ?, phone_number = ? WHERE idUser = ?' ;
+	
+    conn.query(query, [name, last_name, address, city, zip_code, email, phone_number, req.params.id], (err) => {
+		if (err) {
+			console.error('Erreur lors de la modification de l\'utilisateur: ' + err);
+
+			res.status(500).json({ error: 'Erreur lors de la modification de l\'utilisateur' });
+		} else {
+			res.status(200).json({ message: 'Utilisateur modifié' });
+			console.log(id)
+		}
+
+
+	});
+};
+
+
+const deleteUser = (req, res) => {
+	
+	//  = ? va dire quand tu clique sur le bouton delete liza tu récupére id de l'utilisateur en question pour le supprimer 
+	const query = ' DELETE FROM `user` WHERE idUser = ?';
+	
+	conn.query(query, [req.params.id], (err, result) => {
+		if (err) {
+			console.error('Erreur lors de la suppression de l\'utilisateur: ' + err);
+
+			res.status(500).json({ error: 'Erreur lors de la suppression de l\'utilisateur' });
+		} else {
+			res.status(200).json({ message: 'Utilisateur supprimé' });
+		}
+
+
+	});
+};
+
+
 // get all users
-const getALLUsers = (req, res) => {
+const getUsers = (req, res) => {
 	const query = 'SELECT * FROM user';
 	conn.query(query, (err, result) => {
 		if (err) {
@@ -43,5 +84,7 @@ const getALLUsers = (req, res) => {
 
 module.exports = {
 	createUser,
-	getALLUsers,
+	getUsers,
+	deleteUser,
+	editUser,
 };

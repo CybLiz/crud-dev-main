@@ -3,13 +3,11 @@ const userController = require('../controllers/user.controller');
 
 // Register a new user
 router.post('/register', userController.createUser);
-router.post('/register', userController.createUser);
-router.post('/register', userController.createUser);
-
+router.delete('/user/:id', userController.deleteUser);
+router.put('/user/:id', userController.editUser);
 
 
 // get all users
-router.get('/all', userController.getALLUsers);
-
+router.get('/users', userController.getUsers);
 
 module.exports = router;

@@ -2,7 +2,7 @@
 require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
-// const userRoutes = require('./routes/user.route');
+const userRoutes = require('./routes/user.route');
 // analyse la requête
 const cors = require('cors');
 
@@ -15,13 +15,14 @@ app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(cors({
-	origin: 'http://127.0.0.1:5050',
+	origin: 'http://127.0.0.1:5500',
 	optionSuccessStatus:200,
 
 }))
+
 app.use('/' , userRoutes);
 
-
+// 2Lancer l'application sur un port
 
 const start = async() => {
 	try {
@@ -37,3 +38,4 @@ const start = async() => {
 
 
 start();
+
