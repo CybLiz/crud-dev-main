@@ -1,19 +1,19 @@
-*{
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
 
-section{
+section {
 	width: 90%;
-	
-	background-color:#4F709C;
+	padding-top: 70px;
+	background-color: #4F709C;
 	display: flex;
-	flex-direction:column;
+	flex-direction: column;
 	justify-content: center;
 	margin: auto;
-	margin-top: 100px;
+	padding-top: 100px;
 
 
 }
@@ -24,34 +24,110 @@ table {
 	margin-bottom: 30px;
 
 }
+
 th {
 	/* text-decoration: underline; */
 	background-color: #D9D9D9;
-	padding-top: 15px ;
+	padding-top: 15px;
 	padding-bottom: 15px;
 }
 
 td {
-	
-    text-align: center;
+
+	text-align: center;
 	padding: 10px 10px;
 	background-color: #D9D9D9;
 
 }
 
-.form{
-	display: flex;
+.form {
+	display: none;
+	flex-direction: column;
+
 }
 
-button{
-	background-color:#213555;
+.form.active {
+	display: flex;
+
+}
+
+/* button {
+	background-color: #213555;
 	color: white;
 	height: 40px;
 	width: 150px;
-	margin-top: 70px;
-	margin-bottom: 30px;
-	margin-left: 59px;
+
+} */
+
+#buttons {
+	display: flex;
+	width: 90%;
+	justify-content: space-between;
+	margin: auto;
+	margin-bottom: 20px;
 }
 
+#formpopup {
+	width: 50%;
+	height: 1195px;
+	background: #4F709C;
+	margin: auto;
+
+}
+
+.double {
+	display: flex;
+}
+
+#formpopup input {
+	width: 415px;
+	height: 50px;
+	background: '#D9D9D9';
+}
+
+#formpopup button {
+	background-color: #213555;
+	color: white;
+	height: 40px;
+	width: 150px;
+	display: flex;
+	align-items: flex-start;
+
+
+}
+
+.mainmodal {
+
+	background-color: rgba(0, 0, 0, 0.509);
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+
+
+}
+
+.encadrement {
+	
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+
+
+}
+
+#resultupdate{
+	background-color:#4F709C;
+width: 300px;
+height: 500px;
+display: flex;
+flex-direction: column;
+
+}
 
 

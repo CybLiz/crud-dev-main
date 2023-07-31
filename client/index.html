@@ -1,59 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Crud</title>
 	<link rel="stylesheet" href="style.css">
-	
+
 </head>
 
 <body>
- <section class="main">
 
-	<div id="button1">
-		<button type="button"> Ajouter un utilisateur </button>
+	<div class="mainmodal" id="modalist">
+		<div class="encadrement">
+
+			<div class="update">
+				<ul id="resultupdate">
+
+
+				</ul>
+			</div>
+		</div>
 	</div>
+	<section class="main">
 
-	<div class="userdata">
-		<table>
-		<tr>
-			<th>name</th>
-			<th>last_name</th>
-			<th>address</th>
-			<th>city</th>
-			<th>zip_code</th>
-			<th>email</th>
-			<th>phone_number</th>
-		</tr>
+		<div id="buttons">
+			<button type="button" id="button1"> Ajouter un utilisateur </button>
+			
+		</div>
 
-		<tbody id="userList">	</tbody>
-		
-	</table>
-	</div>
+		<div class="userdata">
 
+			<table>
+				<tr>
+					<th>name</th>
+					<th>last_name</th>
+					<th>address</th>
+					<th>city</th>
+					<th>zip_code</th>
+					<th>email</th>
+					<th>phone_number</th>
+					<th>Modifier</th>
+					<th>Supprimer</th>
 
-	<form class="form">
-<label for="name">name</label>
-<input type="text"> 
-<label for="last_name">last_name</label>
-<input type="text"> 
-<label for="address">address</label>
-<input type="text"> 
-<label for="city">city</label>
-<input type="text"> 
-<label for="zip_code">zip_code</label>
-<input type="text"> 
-<label for="email">email</label>
-<input type="text"> 
-<label for="hone_number">phone_number</label>
+					
+				</tr>
+
+				<tbody id="userList"> </tbody>
+
+			</table>
+		</div>
 
 
+		<form class="form" id="formpopup">
+			<div class="double">
+				<label for="name">name</label>
+				<input type="text" id="name" name="name">
+				<label for="last_name">last_name</label>
+				<input type="text" id="last_name" name="last_name">
+			</div>
 
-	</form>
+			<label for="address">address</label>
+			<input type="text" id="address" name="address">
 
-</section>
-	
+			<div class="double">
+				<label for="city">city</label>
+				<input type="text" id="city" name="city">
+				<label for="zip_code">zip_code</label>
+				<input type="text" id="zip_code" name="zip_code">
+			</div>
+
+			<label for="email">email</label>
+			<input type="text" id="email" name="email">
+			<label for="hone_number">phone_number</label>
+			<input type="text" id="phone_number" name="phone_number">
+
+
+			<button type="submit" id="submit"> Enregister </button>
+
+		</form>
+
+
+
+
+
+
+	</section>
+
 	<script src="script.js">  </script>
+	<script src="https://kit.fontawesome.com/34fd8811a2.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
