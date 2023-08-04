@@ -51,38 +51,98 @@ td {
 
 }
 
-/* button {
+#button1 {
 	background-color: #213555;
 	color: white;
 	height: 40px;
 	width: 150px;
+	margin-left: 75px;
+	margin-bottom: 30px;
 
-} */
+}
 
-#buttons {
+/* #buttons {
 	display: flex;
 	width: 90%;
 	justify-content: space-between;
 	margin: auto;
 	margin-bottom: 20px;
-}
+} */
 
 #formpopup {
-	width: 50%;
-	height: 1195px;
-	background: #4F709C;
+
+	background-color: #749BC2;
+	/* display: none; */
+	position: fixed;
+	width: 35%;
 	margin: auto;
+	margin-left: 490px;
+
+}
+
+label {
+	font-size: larger;
+	padding-bottom: 2px;
+}
+
+#centerForm {
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+#formContent {
+	display: flex;
+	flex-direction: column;
+	padding: 60px;
 
 }
 
 .double {
+	width: 500px;
+	height: 50px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	/* margin-right: 200px;
+	margin: auto; */
+	padding-top: 45px;
+
+}
+
+.centerLabel {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.centerLabel input {
+	width: 200px;
+	height: 40px;
+}
+
+.centerLabel label {
 	display: flex;
 }
 
-#formpopup input {
-	width: 415px;
-	height: 50px;
-	background: '#D9D9D9';
+
+.margin {
+	margin-left: 25px;
+	display: flex;
+	flex-direction: column;
+	width: 84%;
+	text-align: left;
+	padding-top: 45px;
+}
+
+
+.margin input {
+	width: 450px;
+	height: 40px;
 }
 
 #formpopup button {
@@ -91,12 +151,15 @@ td {
 	height: 40px;
 	width: 150px;
 	display: flex;
-	align-items: flex-start;
-
+	margin-left: 325px;
+	margin-top: 40px;
+	justify-content: center;
+	align-items: center;
+	font-size: medium;
 
 }
 
-.mainmodal {
+/* .mainmodal {
 
 	background-color: rgba(0, 0, 0, 0.509);
 	display: none;
@@ -109,25 +172,119 @@ td {
 }
 
 .encadrement {
-	
+
 	margin: auto;
 	width: 100%;
 	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
+
+} */
+/* 
+#resultupdate {
+	background-color: #4F709C;
+	width: 300px;
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+
+} */
+
+
+#deleteModal h3 {
+	text-align: center;
+}
+
+#deleteModal {
+
+	background-color: rgba(0, 0, 0, 0.509);
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	margin: 0;
 
 
 }
 
-#resultupdate{
-	background-color:#4F709C;
-width: 300px;
-height: 500px;
-display: flex;
-flex-direction: column;
+#centerModal {
+
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+
+
+}
+
+#deleteContent {
+	background-color: #749BC2;
+	width: 500px;
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	padding-top: 40px;
+
+
+}
+
+#deleteContent button {
+	background-color: #213555;
+	color: white;
+	padding: 15px 45px;
+	display: flex;
+	margin-top: 50px;
+	text-align: center;
+
+}
+
+#centerBtn {
+	display: flex;
+	justify-content: space-evenly;
+
 
 }
 
 
+
+#updateModal {
+
+	background-color: #749BC2;
+	display: none;
+	position: fixed;
+	width: 35%;
+	margin: auto;
+	margin-left: 490px;
+
+}
+
+
+.update {
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+
+
+#updateModal button {
+	background-color: #213555;
+	color: white;
+	height: 40px;
+	width: 150px;
+	display: flex;
+	margin-left: 325px;
+	margin-top: 40px;
+	justify-content: center;
+	align-items: center;
+	font-size: medium;
+
+}

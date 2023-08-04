@@ -14,4 +14,6 @@ router.put('/user/:id', userController.editUser);
 // get all users
 router.get('/users', userController.getUsers);
 
+router.get('/oneuser/:id', userController.getOneUser);
+
 module.exports = router;

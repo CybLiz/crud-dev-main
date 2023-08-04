@@ -11,22 +11,11 @@
 
 <body>
 
-	<div class="mainmodal" id="modalist">
-		<div class="encadrement">
-
-			<div class="update">
-				<ul id="resultupdate">
-
-
-				</ul>
-			</div>
-		</div>
-	</div>
 	<section class="main">
 
-		<div id="buttons">
+		<div>
 			<button type="button" id="button1"> Ajouter un utilisateur </button>
-			
+
 		</div>
 
 		<div class="userdata">
@@ -43,7 +32,7 @@
 					<th>Modifier</th>
 					<th>Supprimer</th>
 
-					
+
 				</tr>
 
 				<tbody id="userList"> </tbody>
@@ -52,33 +41,121 @@
 		</div>
 
 
+
+
 		<form class="form" id="formpopup">
-			<div class="double">
-				<label for="name">name</label>
-				<input type="text" id="name" name="name">
-				<label for="last_name">last_name</label>
-				<input type="text" id="last_name" name="last_name">
+			<div id="centerForm">
+				<div id="formContent">
+					<!-- <h1>Create new user</h1> -->
+					<div class="double">
+						<div class="centerLabel">
+							<label for="name">Name</label>
+							<input type="text" id="name" name="name" />
+						</div>
+
+						<div class="centerLabel">
+							<label for="last_name">Last_Name</label>
+							<input type="text" id="last_name" name="last_name" />
+						</div>
+					</div>
+
+					<div class="margin">
+						<label for="address">Address</label>
+						<input type="text" id="address" name="address" />
+					</div>
+
+					<div class="double">
+						<div class="centerLabel">
+							<label for="city">City</label>
+							<input type="text" id="city" name="city" />
+						</div>
+						<div class="centerLabel">
+							<label for="zip_code">Zip_Code</label>
+							<input type="text" id="zip_code" name="zip_code" />
+						</div>
+					</div>
+
+					<div class="margin">
+						<label for="email">Email</label>
+						<input type="text" id="email" name="email" />
+					</div>
+					<div class="margin">
+						<label for="hone_number">Phone_Number</label>
+						<input type="text" id="phone_number" name="phone_number" />
+					</div>
+					<div class="submit">
+						<button type="submit" id="submit">Enregister</button>
+					</div>
+				</div>
 			</div>
-
-			<label for="address">address</label>
-			<input type="text" id="address" name="address">
-
-			<div class="double">
-				<label for="city">city</label>
-				<input type="text" id="city" name="city">
-				<label for="zip_code">zip_code</label>
-				<input type="text" id="zip_code" name="zip_code">
-			</div>
-
-			<label for="email">email</label>
-			<input type="text" id="email" name="email">
-			<label for="hone_number">phone_number</label>
-			<input type="text" id="phone_number" name="phone_number">
-
-
-			<button type="submit" id="submit"> Enregister </button>
-
 		</form>
+
+
+
+		<div id="deleteModal">
+			<div id="centerModal">
+				<div id="deleteContent">
+
+					<h3> Êtes-vous sure de vouloir supprimer l'utilisateur ?</h3>
+					<div id="centerBtn">
+						<button id="btnyes"> Supprimer</button>
+						<button id="btnno"> Annuler </button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+		<div class="updateModal" id="updateModal">
+			<div class="update">
+
+				<form id="resultupdate">
+
+					<div class="double">
+						<div class="centerLabel">
+							<label for="name">Name</label>
+							<input type="text" id="editName" name="name" />
+						</div>
+
+						<div class="centerLabel">
+							<label for="last_name">Last_Name</label>
+							<input type="text" id="editlast_name" name="last_name" />
+						</div>
+					</div>
+
+					<div class="margin">
+						<label for="address">Address</label>
+						<input type="text" id="editAddress" name="address" />
+					</div>
+
+					<div class="double">
+						<div class="centerLabel">
+							<label for="city">City</label>
+							<input type="text" id="editCity" name="city" />
+						</div>
+						<div class="centerLabel">
+							<label for="zip_code">Zip_Code</label>
+							<input type="text" id="editZip_code" name="zip_code" />
+						</div>
+					</div>
+
+					<div class="margin">
+						<label for="email">Email</label>
+						<input type="text" id="editEmail" name="email" />
+					</div>
+					<div class="margin">
+						<label for="hone_number">Phone_Number</label>
+						<input type="text" id="editPhone_number" name="phone_number" />
+					</div>
+					<div class="submit">
+						<!-- <button type="submit" id="editSubmit">Enregister</button> -->
+						<input type="submit" value="Enregister">
+					</div>
+				</form>
+			</div>
+
+		</div>
 
 
 
